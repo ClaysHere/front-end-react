@@ -26,13 +26,6 @@ const Author = (props) => {
           className={"self-start font-bold"}>
           Github
         </a>
-        <a
-          href={props.gitlab}
-          target={"_blank"}
-          rel={"noreferrer"}
-          className={"self-start font-bold"}>
-          Gitlab
-        </a>
       </div>
     </>
   );
