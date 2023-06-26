@@ -17,7 +17,7 @@ const Author = (props) => {
           target={"_blank"}
           rel={"noreferrer"}
           className={"self-start font-bold"}>
-          Linked In
+          LinkedIn
         </a>
         <a
           href={props.github}
