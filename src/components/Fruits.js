@@ -35,14 +35,7 @@ const Fruits = (props) => {
         />
       </div>
       <div className="hidden md:grid 2xl:grid-cols-2">
-        <Home
-          text1="Tugas Pra UAS"
-          text2="Kelompok CodePhile"
-          text3="Instagram"
-          text4="Gitlab"
-          text5="Github"
-          visibility="invisible"
-        />
+        <Home visibility="invisible" />
       </div>
     </>
   );

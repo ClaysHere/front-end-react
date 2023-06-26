@@ -167,18 +167,7 @@ const FruitData = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              text1="Tugas Pra UAS"
-              text2="Kelompok CodePhile"
-              text3="Instagram"
-              text4="Gitlab"
-              text5="Github"
-            />
-          }
-        />
+        <Route path="/" element={<Home visibility="visible" />} />
         {pages}
       </Routes>
     </BrowserRouter>
