@@ -6,7 +6,6 @@ const Home = (props) => {
     {
       nama: "M. Fikri",
       github: "https://github.com/ClaysHere",
-      gitlab: "https://gitlab.com/muhammadfikri4402",
       instagram: "https://www.instagram.com/mhd.fikri4402/",
       linkedin: "https://www.linkedin.com/in/m-fikri-19bb99241/",
       styles:
@@ -15,7 +14,6 @@ const Home = (props) => {
     {
       nama: "Naomi Prisella",
       github: "https://github.com/naomehmi",
-      gitlab: "https://gitlab.com/",
       instagram: "https://www.instagram.com/naoella_/",
       linkedin: "https://www.linkedin.com/in/naomi-prisella-91879b256/",
       styles:
@@ -24,7 +22,6 @@ const Home = (props) => {
     {
       nama: "Angelica Thomas",
       github: "https://github.com/angelicaa11",
-      gitlab: "https://gitlab.com/",
       instagram: "https://www.instagram.com/angelicathomas_/",
       linkedin: "https://www.linkedin.com/in/angelica-thomas-4761a6253/",
       styles:
