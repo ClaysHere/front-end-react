@@ -173,7 +173,7 @@ const FruitData = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {ada ? null : <Navbar />}
       <Routes location={location} key={location.pathname}>
         <Route

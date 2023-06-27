@@ -17,9 +17,10 @@ const Fruits = (props) => {
   };
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      exit={{ scaleX: 0 }}
+      transition={{ duration: 0.4 }}>
       <div className={`${props.bg}`}>
         <div
           className={`mb-24 pb-4 pt-28 mx-8 grid grid-cols-1 md:grid-cols-2 gap-x-8`}>
