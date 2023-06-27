@@ -1,4 +1,5 @@
 import Author from "../components/Author";
+import Footer from "../components/Footer";
 import Pictures from "../components/Pictures";
 
 const Home = (props) => {
@@ -47,17 +48,18 @@ const Home = (props) => {
     );
   });
   return (
-    <div
-      className={
-        "mt64 p-2 font-inter grid grid-cols-2 gap-4 md:grid-cols-4 md:p-4"
-      }>
-      {allAuthor}
+    <>
       <div
-        className={`${props.visibility} flex items-end text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] col-start-2 row-start-7 `}>
-        <span>Know you Fruits!</span>
+        className={`${props.pad} px-2 pb-1 pt-28 font-inter grid grid-cols-2 gap-4 md:grid-cols-4 md:px-4`}>
+        {allAuthor}
+        <div
+          className={`${props.visibility} flex items-end text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] col-start-2 row-start-7 `}>
+          <span>Know you Fruits!</span>
+        </div>
+        <Pictures />
       </div>
-      <Pictures />
-    </div>
+      <Footer disp={props.disp} />
+    </>
   );
 };
 

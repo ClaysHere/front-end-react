@@ -1,14 +1,11 @@
-import Footer from "./components/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 import FruitData from "./components/FruitData";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <Router>
       <FruitData />
-      <Footer />
-    </>
+    </Router>
   );
 }
 

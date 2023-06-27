@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "../pages/Home";
 import Fruits from "./Fruits";
 import apel from "../img/apple.jpeg";
@@ -11,6 +12,7 @@ import passionfruit from "../img/passionfruit.jpeg";
 import pomegranate from "../img/pomegranate.jpeg";
 import rambutan from "../img/rambutan.jpeg";
 import strawberry from "../img/strawberry.jpeg";
+import Navbar from "./Navbar";
 
 const FruitData = () => {
   const Datas = [
@@ -25,7 +27,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-red-500",
+      bg: "bg-red-200 text-slate-700",
     },
     {
       id: "02",
@@ -38,7 +40,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-yellow-400",
+      bg: "bg-yellow-200 text-slate-700",
     },
     {
       id: "03",
@@ -51,7 +53,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-orange-300",
+      bg: "bg-orange-200 text-slate-700",
     },
     {
       id: "04",
@@ -64,7 +66,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-slate-300",
+      bg: "bg-slate-300 text-slate-700",
     },
     {
       id: "05",
@@ -77,7 +79,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-green-500",
+      bg: "bg-green-300 text-slate-700",
     },
     {
       id: "06",
@@ -90,7 +92,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-orange-500",
+      bg: "bg-orange-200 text-slate-700",
     },
     {
       id: "07",
@@ -103,7 +105,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-yellow-500",
+      bg: "bg-yellow-200 text-slate-700",
     },
     {
       id: "08",
@@ -116,7 +118,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-red-600",
+      bg: "bg-red-300 text-slate-700",
     },
     {
       id: "09",
@@ -129,7 +131,7 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-slate-200",
+      bg: "bg-slate-200 text-slate-700",
     },
     {
       id: "10",
@@ -142,35 +144,45 @@ const FruitData = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
       desc3:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad, odit tempora rerum delectus quos et accusamus repellendus vitae ab fugit saepe natus nostrum labore aliquam, qui quidem a quasi?",
-      bg: "bg-red-600",
+      bg: "bg-red-300 text-slate-700",
     },
   ];
+  let ada = false;
   const pages = Datas.map((data) => {
     return (
       <Route
         key={data.id}
         path={`/${data.path}`}
         element={
-          <Fruits
-            id={data.id}
-            nama={data.nama}
-            img={data.image}
-            desk1={data.desc1}
-            desk2={data.desc2}
-            desk3={data.desc3}
-            bg={data.bg}
-          />
+          <>
+            {ada ? <Navbar bg={data.bg} /> : null}
+            <Fruits
+              id={data.id}
+              nama={data.nama}
+              img={data.image}
+              desk1={data.desc1}
+              desk2={data.desc2}
+              desk3={data.desc3}
+              bg={data.bg}
+            />
+          </>
         }
       />
     );
   });
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home visibility="visible" />} />
+    <AnimatePresence>
+      {ada ? null : <Navbar />}
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={<Home visibility="visible" pad="md:pt-28" />}
+        />
         {pages}
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   );
 };
 
