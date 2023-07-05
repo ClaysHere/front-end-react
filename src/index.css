@@ -15,6 +15,55 @@
   @apply font-sans;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.active {
+  @apply text-teal-300;
+}
+
+.nav-menu {
+  @apply text-lg md:text-xl hover:scale-110 transition duration-300 after:transition after:duration-300 flex flex-col after:border-b-4 after:scale-x-0 hover:text-teal-300 hover:after:border-teal-300 hover:after:scale-x-75 font-semibold ease-in-out after:ease-in-out cursor-pointer;
+}
+
+.nav-fix {
+  @apply fixed z-[9999] bg-opacity-60 backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.burger-line {
+  @apply my-2 block h-[2px] w-[30px] transition duration-300 ease-in-out bg-white rounded;
+}
+
+.burger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.burger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.burger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.swiper {
+  @apply w-full;
+}
+
+.swiper-bold {
+  @apply text-[30px] leading-[36px];
+}
+
+.swiper-thin {
+  @apply text-[16px] leading-[24px];
+}
+
+.swiper-wrapper {
+  @apply flex justify-between items-end;
+}
+
 .fade-enter {
   opacity: 0;
 }
