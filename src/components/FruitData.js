@@ -1,5 +1,4 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import Home from "../pages/Home";
 import Fruits from "./Fruits";
 import apel from "../img/apple.jpeg";
@@ -12,7 +11,6 @@ import passionfruit from "../img/passionfruit.jpeg";
 import pomegranate from "../img/pomegranate.jpeg";
 import rambutan from "../img/rambutan.jpeg";
 import strawberry from "../img/strawberry.jpeg";
-import Navbar from "./Navbar";
 
 const FruitData = () => {
   const Datas = [
@@ -147,7 +145,6 @@ const FruitData = () => {
       bg: "bg-red-300 text-slate-700",
     },
   ];
-  let ada = false;
   const pages = Datas.map((data) => {
     return (
       <Route
@@ -155,7 +152,6 @@ const FruitData = () => {
         path={`/${data.path}`}
         element={
           <>
-            {ada ? <Navbar bg={data.bg} /> : null}
             <Fruits
               id={data.id}
               nama={data.nama}
@@ -173,8 +169,7 @@ const FruitData = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      {ada ? null : <Navbar />}
+    <>
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
@@ -182,7 +177,7 @@ const FruitData = () => {
         />
         {pages}
       </Routes>
-    </AnimatePresence>
+    </>
   );
 };
 

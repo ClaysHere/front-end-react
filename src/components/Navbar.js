@@ -1,14 +1,10 @@
-import { motion } from "framer-motion";
-
-const Navbar = (props) => {
+const Navbar = () => {
   return (
-    <motion.div
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      exit={{ scaleX: 0 }}
-      transition={{ duration: 0.4 }}>
-      <div className={props.bg}>
-        <nav className="px-4 py-8 w-full bg-black text-white fixed z-[99999] bg-opacity-60 backdrop-blur-sm flex justify-between items-center">
+    <>
+      <div>
+        <nav
+          id="nav-fix"
+          className="px-4 py-8 w-full bg-black text-white fixed z-[99999] backdrop-blur-sm flex justify-between items-center">
           <div className="text-3xl font-semibold font-mono">
             Fruit
             <span className="text-red-400 italic">Pedia</span>.
@@ -19,7 +15,7 @@ const Navbar = (props) => {
         </nav>
         {/* <div className={`${props.bg}`}></div> */}
       </div>
-    </motion.div>
+    </>
   );
 };
 

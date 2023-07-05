@@ -1,7 +1,7 @@
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer
-      className={`${props.marg} ${props.disp} flex justify-center items-center py-8 bg-black text-white bg-opacity-70`}>
+      className={`flex justify-center items-center py-8 bg-black text-white bg-opacity-70`}>
       <p>FruitPedia &copy;2023</p>
     </footer>
   );

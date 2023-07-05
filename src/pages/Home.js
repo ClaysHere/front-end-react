@@ -1,5 +1,4 @@
 import Author from "../components/Author";
-import Footer from "../components/Footer";
 import Pictures from "../components/Pictures";
 
 const Home = (props) => {
@@ -58,7 +57,6 @@ const Home = (props) => {
         </div>
         <Pictures />
       </div>
-      <Footer disp={props.disp} />
     </>
   );
 };

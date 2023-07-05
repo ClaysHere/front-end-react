@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import Home from "../pages/Home";
-import { motion } from "framer-motion";
-import Footer from "./Footer";
 
 const Fruits = (props) => {
   const location = useLocation();
@@ -16,11 +14,7 @@ const Fruits = (props) => {
     navigate("/");
   };
   return (
-    <motion.div
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      exit={{ scaleX: 0 }}
-      transition={{ duration: 0.4 }}>
+    <>
       <div className={`${props.bg}`}>
         <div
           className={`mb-24 pb-4 pt-28 mx-8 grid grid-cols-1 md:grid-cols-2 gap-x-8`}>
@@ -48,11 +42,10 @@ const Fruits = (props) => {
           />
         </div>
         <div className={`${props.bg} hidden md:grid 2xl:grid-cols-2`}>
-          <Home visibility="invisible" disp="md:hidden" />
+          <Home visibility="invisible" disp="md:hidden" pad="" />
         </div>
       </div>
-      <Footer marg="-mt-24 md:mt-0" />
-    </motion.div>
+    </>
   );
 };
 
