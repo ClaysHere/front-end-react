@@ -50,16 +50,16 @@ const Fruits = (props) => {
             alt={"gambar"}
           />
           <div className={"mt-4 lg:col-start-2 lg:row-start-3 md:text-xl"}>
-            <h1>Description</h1>
-            <p>{props.desc}</p>
+            <h1 className="text-xl font-bold mb-4 mt-8">Description</h1>
+            <p className="text-sm font-semibold">{props.desc}</p>
           </div>
           <div className={"mt-4 lg:col-start-2 lg:row-start-4 md:text-xl"}>
-            <h1>Origin</h1>
-            <p>{props.origin}</p>
+            <h1 className="text-xl font-bold mb-4 mt-8">Origin</h1>
+            <p className="text-sm font-semibold">{props.origin}</p>
           </div>
           <div className={"mt-4 lg:col-start-2 lg:row-start-5 md:text-xl"}>
-            <h1>Variety</h1>
-            <p>{props.variety}</p>
+            <h1 className="text-xl font-bold mb-4 mt-8">Variety</h1>
+            <p className="text-sm font-semibold">{props.variety}</p>
           </div>
           <HiOutlineArrowNarrowLeft
             onClick={handleClick}
