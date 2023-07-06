@@ -71,7 +71,7 @@ const Home = (props) => {
   return (
     <>
       <div
-        className={`${props.pad} px-2 pb-1 pt-28 font-inter grid grid-cols-2 gap-4 md:grid-cols-4 md:px-4`}>
+        className={`${props.pad} px-2 pb-1 pt-16 md:pt-24 lg:pt-28 font-inter grid grid-cols-2 gap-4 md:grid-cols-4 md:px-4`}>
         {allAuthor}
         <div
           className={`${props.visibility} flex items-end text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] col-start-2 row-start-7 `}>
