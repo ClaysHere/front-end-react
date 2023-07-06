@@ -37,7 +37,7 @@ const Fruits = (props) => {
   };
   return (
     <>
-      <div data-aos="fade-up" className={`${props.bg}`}>
+      <div data-aos="fade-up" className={`${props.bg} h-full pb-8`}>
         <div
           className={`mb-24 pb-4 pt-28 mx-8 grid grid-cols-1 md:grid-cols-2 gap-x-8`}>
           <p className={"col-start-1 text-base font-semibold"}>{props.id}</p>
@@ -49,15 +49,18 @@ const Fruits = (props) => {
             src={props.img}
             alt={"gambar"}
           />
-          <p className={"mt-4 lg:col-start-2 lg:row-start-3 md:text-xl"}>
-            {props.desk1}
-          </p>
-          <p className={"mt-4 lg:col-start-2 lg:row-start-4 md:text-xl"}>
-            {props.desk2}
-          </p>
-          <p className={"mt-4 lg:col-start-2 lg:row-start-5 md:text-xl"}>
-            {props.desk3}
-          </p>
+          <div className={"mt-4 lg:col-start-2 lg:row-start-3 md:text-xl"}>
+            <h1>Description</h1>
+            <p>{props.desc}</p>
+          </div>
+          <div className={"mt-4 lg:col-start-2 lg:row-start-4 md:text-xl"}>
+            <h1>Origin</h1>
+            <p>{props.origin}</p>
+          </div>
+          <div className={"mt-4 lg:col-start-2 lg:row-start-5 md:text-xl"}>
+            <h1>Variety</h1>
+            <p>{props.variety}</p>
+          </div>
           <HiOutlineArrowNarrowLeft
             onClick={handleClick}
             className={`bg-white animate-pulse hover:animate-none bg-opacity-50 backdrop-blur-sm text-black p-2 hover:scale-110 fixed bottom-4 rounded-full w-16 h-16 border-2 border-black md:bg-opacity-100 md:mt-16 lg:row-start-6 z-[9999] md:bg-white`}
