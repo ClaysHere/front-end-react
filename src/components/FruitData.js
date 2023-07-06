@@ -151,7 +151,7 @@ const FruitData = () => {
         key={data.id}
         path={`/${data.path}`}
         element={
-          <>
+          <div className={`${data.bg} h-[1000px] md:h-full`}>
             <Fruits
               id={data.id}
               nama={data.nama}
@@ -161,7 +161,7 @@ const FruitData = () => {
               desk3={data.desc3}
               bg={data.bg}
             />
-          </>
+          </div>
         }
       />
     );
