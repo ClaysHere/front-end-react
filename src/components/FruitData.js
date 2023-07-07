@@ -13,6 +13,7 @@ import rambutan from "../img/rambutan.jpeg";
 import strawberry from "../img/strawberry.jpeg";
 import Creator from "../pages/Creator";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
 
 const FruitData = () => {
   const Datas = [
@@ -166,6 +167,7 @@ const FruitData = () => {
           element={<Home visibility="visible" pad="md:pt-28" />}
         />
         <Route path="/creator" element={<Creator />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         {pages}
       </Routes>

@@ -19,44 +19,61 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>Full Name*</label>
-      <input
-        required
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
+    <form
+      className="w-full px-16 md:px-32 xl:px-32 2xl:px-40 flex flex-col"
+      onSubmit={handleSubmit}
+      autoComplete="off">
+      <div className="flex flex-col gap-y-2 mt-4">
+        <label>Full Name*</label>
+        <input
+          className="border px-2 py-2 border-slate-600 w-full rounded-md"
+          required
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label>Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
+      <div className="flex flex-col gap-y-2 mt-4">
+        <label>Email</label>
+        <input
+          className="border px-2 py-2 border-slate-600 w-full rounded-md"
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label>Phone Number</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-      />
+      <div className="flex flex-col gap-y-2 mt-4">
+        <label>Phone Number</label>
+        <input
+          className="border px-2 py-2 border-slate-600 w-full rounded-md"
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label>Message*</label>
-      <textarea
-        required
-        id="message"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-      />
-      <button className="btn" type="submit">
+      <div className="flex flex-col gap-y-2 mt-4">
+        <label>Message*</label>
+        <textarea
+          className="border px-2 py-2 border-slate-600 w-full rounded-md"
+          required
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+      <button
+        className="bg-teal-300 text-lg text-slate-700 hover:text-slate-700/70 font-bold hover:bg-teal-500 px-4 py-2 rounded-xl mt-4 w-1/2 self-center"
+        type="submit">
         Submit
       </button>
     </form>

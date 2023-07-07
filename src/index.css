@@ -85,10 +85,10 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 .header {
   background-image: url("./img/background.jpg");
@@ -128,12 +128,13 @@ body {
 }
 
 .boxes {
-  margin: 20px;
-  padding: 20px;
-  height: 150px;
-  border-radius: 20px;
-  box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.4);
-  width: 35vw;
+  @apply bg-slate-100 rounded-xl shadow-2xl w-full p-8;
+  /* margin: 20px; */
+  /* padding: 20px; */
+  /* height: 150px; */
+  /* border-radius: 20px; */
+  /* box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.4); */
+  /* width: 35vw; */
 }
 
 .boxes a {
@@ -144,7 +145,8 @@ body {
 
 #left {
   text-align: left;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  @apply w-full;
 }
 
 #right a,
@@ -155,6 +157,7 @@ body {
 #right {
   margin-left: auto;
   margin-right: 10%;
+  @apply w-full;
 }
 
 .team a {
@@ -172,7 +175,7 @@ body {
     font-size: 18px;
   }
   .boxes {
-    width: 70vw;
+    /* width: 70vw; */
     display: flex;
     flex-direction: column;
   }
