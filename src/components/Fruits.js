@@ -37,27 +37,34 @@ const Fruits = (props) => {
   };
   return (
     <>
-      <div data-aos="fade-up" className={`${props.bg} h-full pb-8`}>
+      <div className={`${props.bg} h-full pb-8`}>
         <div
           className={`mb-24 pb-4 pt-28 mx-8 grid grid-cols-1 md:grid-cols-2 gap-x-8`}>
           <p className={"col-start-1 text-base font-semibold"}>{props.id}</p>
           <p className={"font-bold text-4xl md:col-start-1"}>{props.nama}</p>
           <img
+            data-aos="fade-right"
             className={
               "w-full mt-4 rounded-lg md:row-span-2 lg:row-start-3 lg:col-start-1 lg:row-span-3"
             }
             src={props.img}
             alt={"gambar"}
           />
-          <div className={"mt-4 lg:col-start-2 lg:row-start-3 md:text-xl"}>
+          <div
+            data-aos="fade-left"
+            className={"mt-4 lg:col-start-2 lg:row-start-3 md:text-xl"}>
             <h1 className="text-xl font-bold mb-4 mt-8">Description</h1>
             <p className="text-sm font-semibold">{props.desc}</p>
           </div>
-          <div className={"mt-4 lg:col-start-2 lg:row-start-4 md:text-xl"}>
+          <div
+            data-aos="fade-left"
+            className={"mt-4 lg:col-start-2 lg:row-start-4 md:text-xl"}>
             <h1 className="text-xl font-bold mb-4 mt-8">Origin</h1>
             <p className="text-sm font-semibold">{props.origin}</p>
           </div>
-          <div className={"mt-4 lg:col-start-2 lg:row-start-5 md:text-xl"}>
+          <div
+            data-aos="fade-left"
+            className={"mt-4 lg:col-start-2 lg:row-start-5 md:text-xl"}>
             <h1 className="text-xl font-bold mb-4 mt-8">Variety</h1>
             <p className="text-sm font-semibold">{props.variety}</p>
           </div>

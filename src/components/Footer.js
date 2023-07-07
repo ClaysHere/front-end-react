@@ -44,10 +44,10 @@ const Footer = () => {
             <p className={"text-slate-400 mb-2 cursor-pointer"}>
               <span
                 onClick={() => {
-                  navigate("/portfolio");
+                  navigate("/creator");
                 }}
                 className={"hover:text-teal-300"}>
-                SOON!
+                Creator
               </span>
             </p>
             <p className={"text-slate-400 mb-2 cursor-pointer"}>
@@ -56,7 +56,7 @@ const Footer = () => {
                   navigate("/about");
                 }}
                 className={"hover:text-teal-300"}>
-                SOON!
+                About
               </span>
             </p>
             <p className={"text-slate-400 mb-2 cursor-pointer"}>
@@ -65,7 +65,7 @@ const Footer = () => {
                   navigate("/contact");
                 }}
                 className={"hover:text-teal-300"}>
-                SOON!
+                Contact
               </span>
             </p>
           </div>

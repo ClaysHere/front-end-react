@@ -81,3 +81,115 @@ body {
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+.header {
+  background-image: url("./img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 55vh;
+  width: 100%;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.team p {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 10%;
+  margin-top: 5.5%;
+  margin-bottom: 5%;
+}
+
+.boxes h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.boxes {
+  margin: 20px;
+  padding: 20px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.4);
+  width: 35vw;
+}
+
+.boxes a {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+#left {
+  text-align: left;
+  margin-left: 10%;
+}
+
+#right a,
+#right h1 {
+  text-align: right;
+}
+
+#right {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.team a {
+  text-decoration: none;
+  color: darkorange;
+  letter-spacing: 1.5px;
+}
+
+.team a:hover {
+  color: orangered;
+}
+
+@media only screen and (max-width: 767px) {
+  .overlay {
+    font-size: 18px;
+  }
+  .boxes {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes a {
+    text-align: left;
+    width: 100%;
+  }
+  .boxes h1 {
+    font-size: 25px;
+  }
+
+  #left,
+  #right {
+    margin: 20px auto;
+  }
+
+  .team p {
+    font-size: 15px;
+  }
+}

@@ -88,13 +88,13 @@ const Navbar = () => {
 
           <li
             className={`nav-menu ${
-              location.pathname === "/portfolio" ? "active" : ""
+              location.pathname === "/creator" ? "active" : ""
             }`}
             onClick={() => {
-              handleMenuClick("/portfolio");
+              handleMenuClick("/creator");
               setIsMenuOpen(false);
             }}>
-            SOON!
+            CREATOR
           </li>
           <li
             className={`nav-menu ${
@@ -104,7 +104,7 @@ const Navbar = () => {
               handleMenuClick("/about");
               setIsMenuOpen(false);
             }}>
-            SOON!
+            ABOUT
           </li>
           <li
             className={`nav-menu ${
@@ -114,7 +114,7 @@ const Navbar = () => {
               handleMenuClick("/contact");
               setIsMenuOpen(false);
             }}>
-            SOON!
+            CONTACT
           </li>
         </ul>
         <div
