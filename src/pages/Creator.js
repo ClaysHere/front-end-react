@@ -9,6 +9,7 @@ const Creator = () => {
   });
   AOS.init({
     duration: 1200,
+    once: "true",
   });
   const authors = [
     {
@@ -50,11 +51,12 @@ const Creator = () => {
         instagram={author.instagram}
         linkedin={author.linkedin}
         dataAOS={author.dataAOS}
+        once="true"
       />
     );
   });
   return (
-    <div className="team bg-slate-200">
+    <div data-aos="fade-up" className="team bg-slate-200">
       <div className="header">
         <div className="overlay">
           <h1 className="text-4xl font-bold text-slate-100">
